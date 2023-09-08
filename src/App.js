@@ -1,24 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import Navigate from './Navbar.jsx';
+import { BrowserRouter, Routes, Route, Switch } from 'react-router-dom';
+import Dash from './Dash';
+import AddUser from "./AddUser";
+import UpdateUser from './UpdateUser';
+import 'bootstrap/dist/css/bootstrap.css'
+
+export const userArr=[];
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+     <BrowserRouter>
+      <Navigate/>
+       <Routes>
+          <Route path="/" element={<Dash/>}></Route> 
+          <Route path='/AddUser' element={<AddUser/>}></Route>
+          <Route path='/UpdateUser' element={<UpdateUser/>}></Route>
+
+      </Routes>
+    
+      </BrowserRouter>
   );
 }
 
