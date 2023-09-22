@@ -1,3 +1,17 @@
+.dash{
+  background-color: gray;
+}
+
 .App {
   text-align: center;
+}
+.nav-item{
+  color: white;
+  text-decoration: none;
+}
+.card{
+  background-color: cadetblue;
+}
+li{
+  text-decoration: none;
 }
